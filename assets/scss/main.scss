@@ -1,0 +1,84 @@
+a {
+  @apply no-underline;
+  @apply underline-offset-2;
+  @apply hover:underline;
+
+  color: blue;
+}
+
+article {
+  background-color: theme("colors.neutral.100");
+  @apply min-h-screen;
+  @apply p-4;
+}
+
+body {
+  background-color: theme("colors.neutral.200");
+  font-family: Lato, sans-serif;
+
+  color: theme("colors.neutral.800");
+
+  margin: auto;
+  max-width: 800px;
+
+  @apply px-8;
+}
+
+br {
+}
+
+figure {
+  @apply pb-8;
+}
+
+h1 {
+  @apply text-3xl;
+  @apply py-4;
+}
+
+h2 {
+  @apply text-2xl;
+  @apply pt-3;
+  @apply pb-2;
+}
+
+h3 {
+  @apply text-xl;
+}
+
+li {
+  @apply pb-2 ms-8;
+}
+
+p {
+  @apply leading-relaxed mb-4 mt-0;
+}
+
+table {
+  @apply mb-4 m-auto;
+}
+
+table td,
+th,
+tr {
+  @apply border border-neutral-300 p-1;
+}
+
+th {
+  @apply bg-neutral-200 px-4;
+}
+
+tr {
+  @apply bg-white px-4;
+}
+
+ul {
+  @apply list-disc list-outside mb-4;
+}
+
+//  Mix
+
+//  Leading Paragraph
+h1 + p {
+  @apply leading-relaxed mt-6 mb-4 text-lg text-stone-600;
+}

@@ -11,13 +11,16 @@
   "devDependencies": {
     "@nuxt/content": "^2.7.1",
     "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.8.0",
     "@prettier/plugin-pug": "^2.5.1",
     "@types/node": "^18.16.19",
     "@vue/language-plugin-pug": "^1.8.5",
+    "autoprefixer": "^10.4.14",
     "nuxt": "^3.6.5",
     "prettier": "^3.0.0",
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",
+    "sass": "^1.64.0",
     "vue": "^3.3.4"
   }
 }

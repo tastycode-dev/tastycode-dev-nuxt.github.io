@@ -1,3 +1,4 @@
 <template lang="pug">
-ContentDoc
+article
+  ContentDoc
 </template>
