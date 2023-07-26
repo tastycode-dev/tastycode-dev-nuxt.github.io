@@ -1,5 +1,7 @@
 serve:
 	yarn dev -o
 
-generate:
+build:
 	yarn generate
+preview:
+	npx serve .output/public
