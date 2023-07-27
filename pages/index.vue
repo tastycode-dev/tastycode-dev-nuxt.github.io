@@ -5,8 +5,8 @@ const queryDrafts = await queryContent("blog")
   .find();
 
 const queryPosts = await queryContent("blog")
-  // .where({ _partial: false })
-  // .sort({ _id: -1 })
+  .where({ _partial: false })
+  .sort({ _id: -1 })
   .find();
 
 const isDev = process.dev;
