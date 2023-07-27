@@ -5,3 +5,5 @@ build:
 	yarn generate
 preview:
 	npx serve .output/public
+deploy:
+	yarn deploy

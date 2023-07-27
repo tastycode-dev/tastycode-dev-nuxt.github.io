@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
+    "deploy": "gh-pages -d .output/public --dotfiles",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -16,6 +17,7 @@
     "@types/node": "^18.16.19",
     "@vue/language-plugin-pug": "^1.8.5",
     "autoprefixer": "^10.4.14",
+    "gh-pages": "^5.0.0",
     "nuxt": "^3.6.5",
     "prettier": "^3.0.0",
     "pug": "^3.0.2",
