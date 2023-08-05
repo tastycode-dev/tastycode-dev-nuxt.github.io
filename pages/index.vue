@@ -1,4 +1,16 @@
 <script setup lang="ts">
+const author = "Oleksandr Gituliar";
+const title = "TastyVoid";
+const description = "Blog about C++ programming and quantitative finance";
+
+useSeoMeta({
+  author: author,
+  title: title,
+  ogTitle: title,
+  description: description,
+  ogDescription: description,
+});
+
 const queryDrafts = await queryContent("blog")
   .where({ _partial: true })
   .sort({ _id: 1 })

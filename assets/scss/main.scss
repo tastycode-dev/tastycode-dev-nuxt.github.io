@@ -49,6 +49,10 @@ h3 {
   @apply pb-2;
 }
 
+header {
+  @apply pb-6;
+}
+
 li {
   @apply pb-2 ms-8;
 }
@@ -91,6 +95,6 @@ ul {
 //  Mix
 
 //  Leading Paragraph
-h1 + p {
+.article-body > p:first-child {
   @apply leading-relaxed mt-6 mb-4 text-lg text-stone-600;
 }
