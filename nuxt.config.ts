@@ -1,5 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  content: {
+    highlight: {
+      theme: "github-light",
+      preload: ["cpp"],
+    },
+  },
   css: ["@/assets/scss/main.scss"],
   devtools: { enabled: false },
   modules: ["@nuxt/content", "@nuxtjs/tailwindcss"],

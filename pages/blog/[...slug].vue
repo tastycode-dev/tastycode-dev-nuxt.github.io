@@ -7,11 +7,17 @@ function formatDate(date) {
 
 <template lang="pug">
 article
+  .header
+    a(id="header" href="/")
+      img(src="/img/logo.png" id="logo")
+      span.align-middle TastyCode
   ContentDoc(v-slot="{doc}")
     header
       h1 {{doc.title}}
-      h4
+      address
+        a(href="https://gituliar.net" rel="author")  {{doc.author}}
+        |  •
+        |
         time {{ formatDate(doc.date) }}
-        |  by {{doc.author}}
     ContentRenderer.article-body(:value="doc")
 </template>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const author = "Oleksandr Gituliar";
-const title = "TastyVoid";
+const title = "TastyCode";
 const description = "Blog about C++ programming and quantitative finance";
 
 useSeoMeta({
@@ -33,7 +33,7 @@ article
         li(v-for="article in queryDrafts" :key="article._path")
           NuxtLink(:to="article._path") {{ article.title }}
 
-  h2 Programming and Quantitative Finance 
+  h2 Blog on Programming and Quantitative Finance 
   nav
     div.pb-2(v-for="article in queryPosts" :key="article._path")
       h3
