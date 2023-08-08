@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  components: {
+    global: true,
+  },
   content: {
     highlight: {
       theme: "github-light",

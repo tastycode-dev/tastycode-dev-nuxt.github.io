@@ -26,17 +26,19 @@ const isDev = process.dev;
 
 <template lang="pug">
 article
+  Header
   template(v-if="isDev")
     h2 Drafts 
     nav
       ul
-        li(v-for="article in queryDrafts" :key="article._path")
-          NuxtLink(:to="article._path") {{ article.title }}
+        li(v-for="post in queryDrafts" :key="post._path")
+          NuxtLink(:to="post._path") {{ post.title }}
 
-  h2 Blog on Programming and Quantitative Finance 
   nav
-    div.pb-2(v-for="article in queryPosts" :key="article._path")
+    div.pb-2(v-for="post in queryPosts" :key="post._path")
       h3
-        NuxtLink(:to="article._path") {{ article.title }}
-      p {{ article.description }}
+        NuxtLink(:to="post._path") {{ post.title }}
+        div.text-sm
+          time {{ formatDate(post.date) }}
+      p.text-sm {{ post.description }}
 </template>
