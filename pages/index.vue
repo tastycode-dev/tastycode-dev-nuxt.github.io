@@ -1,7 +1,11 @@
 <script setup lang="ts">
 const author = "Oleksandr Gituliar";
 const title = "TastyCode";
-const description = "Blog about C++ programming and quantitative finance";
+const description = "Blog about programming and quantitative finance";
+
+useHeadSafe({
+  htmlAttrs: { lang: "en-US" },
+});
 
 useSeoMeta({
   author: author,
@@ -25,6 +29,7 @@ const isDev = process.dev;
 </script>
 
 <template lang="pug">
+h1.hidden {{description}}
 article
   Header
   template(v-if="isDev")
