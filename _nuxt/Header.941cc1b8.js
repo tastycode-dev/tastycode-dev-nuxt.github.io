@@ -1,1 +1,0 @@
-import{o as s,c as o,a as e,_ as t}from"./entry.7ad5e47c.js";const c=""+globalThis.__publicAssetsURL("img/logo.png"),a={class:"header"},_=e("a",{id:"header",href:"/"},[e("img",{src:c,id:"logo"}),e("span",{class:"align-middle"},"TastyCode")],-1),n=[_];function r(d,l){return s(),o("div",a,n)}const i={},p=t(i,[["render",r]]);export{p as default};
