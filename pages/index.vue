@@ -1,31 +1,21 @@
 <script setup lang="ts">
-const author = "Oleksandr Gituliar";
-const title = "TastyCode";
-const description = "Blog about programming and quantitative finance";
+  useHeadSafe({
+    htmlAttrs: { lang: "en-US" },
+    link: [{ rel: "icon", href: "/favicon.ico" }],
+    meta: [{ name: "TastyCode" }],
+  });
 
-useHeadSafe({
-  htmlAttrs: { lang: "en-US" },
-});
+  useSeoMeta({
+    author: "Oleksandr Gituliar",
+    title: "TastyCode",
+    description: "Blog about programming and quantitative finance",
+  });
 
-useSeoMeta({
-  author: author,
-  title: title,
-  ogTitle: title,
-  description: description,
-  ogDescription: description,
-});
+  const queryDrafts = await queryContent("blog").where({ _partial: true }).sort({ _id: 1 }).find();
 
-const queryDrafts = await queryContent("blog")
-  .where({ _partial: true })
-  .sort({ _id: 1 })
-  .find();
+  const queryPosts = await queryContent("blog").where({ _partial: false }).sort({ _id: -1 }).find();
 
-const queryPosts = await queryContent("blog")
-  .where({ _partial: false })
-  .sort({ _id: -1 })
-  .find();
-
-const isDev = process.dev;
+  const isDev = process.dev;
 </script>
 
 <template lang="pug">
@@ -43,7 +33,7 @@ article
     div.pb-2(v-for="post in queryPosts" :key="post._path")
       h3
         NuxtLink(:to="post._path") {{ post.title }}
-        div.text-sm
+        div.text-sm.text-stone-500
           time {{ formatDate(post.date) }}
-      p.text-sm {{ post.description }}
+      //- p.text-sm {{ post.description }}
 </template>

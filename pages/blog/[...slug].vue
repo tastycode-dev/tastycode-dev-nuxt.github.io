@@ -1,3 +1,15 @@
+<script setup>
+  useHeadSafe({
+    htmlAttrs: { lang: "en-US" },
+    link: [{ rel: "icon", href: "/favicon.ico" }],
+    meta: [{ name: "TastyCode" }],
+  });
+
+  useSeoMeta({
+    author: "Oleksandr Gituliar",
+  });
+</script>
+
 <template lang="pug">
 article
   Header
@@ -8,6 +20,6 @@ article
         a(href="https://gituliar.net" rel="author")  {{doc.author}}
         |  •
         |
-        time {{ formatDate(doc.date) }}
+        time(:datetime=`doc.date` itemprop="datePublished" pubdate="pubdate") {{ formatDate(doc.date) }}
     ContentRenderer.article-body(:value="doc")
 </template>
