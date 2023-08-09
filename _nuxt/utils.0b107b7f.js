@@ -1,1 +1,0 @@
-import{u as n,j as f,k as i,l as c,m as l,n as m}from"./entry.d35b6f87.js";function d(e,t={}){return n(e,{...t,transform:f})}function S(e,t){const a=i({});return c(()=>{const s=l(e),{title:r,titleTemplate:u,...o}=s;a.value={title:r,titleTemplate:u,meta:m(o)}}),n(a,t)}function I(e){return new Date(e).toISOString().split("T")[0]}export{S as a,I as f,d as u};
