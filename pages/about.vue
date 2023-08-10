@@ -1,3 +1,17 @@
+<script setup lang="ts">
+useHeadSafe({
+  htmlAttrs: { lang: "en-US" },
+  link: [{ rel: "icon", href: "/favicon.ico" }],
+  meta: [{ name: "TastyCode" }],
+});
+
+useSeoMeta({
+  author: "Oleksandr Gituliar",
+  title: "About | TastyCode",
+  description: "Blog about programming and quantitative finance",
+});
+</script>
+
 <template lang="pug">
 article
   Header
